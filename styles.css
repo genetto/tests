@@ -1,0 +1,79 @@
+/* --- CONTAINER & GRUNDLAGEN --- */
+/* Setzt Schriftart und Breite für das gesamte Formular */
+.steamContactForm_contentDiv, form {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif !important;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: transparent !important; /* Kein grauer Hintergrund */
+}
+
+/* --- LABELS (Beschriftungen) --- */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333; /* Dunkelgraue Schrift */
+    font-size: 14px;
+}
+
+/* --- EINGABEFELDER (Input & Textarea) --- */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+textarea,
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd !important; /* Dünner grauer Rahmen */
+    background-color: #fff !important;
+    border-radius: 6px !important; /* Leicht abgerundete Ecken */
+    font-size: 16px;
+    box-sizing: border-box; /* Verhindert, dass Padding die Breite sprengt */
+    transition: all 0.3s ease;
+}
+
+/* Effekt beim Reinklicken */
+input:focus, textarea:focus, select:focus {
+    border-color: #007bff !important; /* Hier deine Farbe einsetzen */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1); /* Leichter Schein */
+}
+
+/* Textarea Höhe festlegen */
+textarea {
+    min-height: 120px;
+    resize: vertical; /* Erlaubt vertikales Ziehen */
+}
+
+/* --- SENDEN BUTTON --- */
+button, input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #000 !important; /* Button-Farbe: Schwarz */
+    color: #fff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-top: 10px;
+}
+
+/* Button Hover Effekt (Maus drüber) */
+button:hover, input[type="submit"]:hover {
+    background-color: #333 !important; /* Etwas heller beim Drüberfahren */
+    transform: translateY(-2px); /* Button hebt sich leicht */
+}
+
+/* --- FEHLERMELDUNGEN (falls vorhanden) --- */
+.error, .validation-error {
+    color: #dc3545 !important;
+    font-size: 13px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
