@@ -1,79 +1,53 @@
-/* --- CONTAINER & GRUNDLAGEN --- */
-/* Setzt Schriftart und Breite für das gesamte Formular */
-.steamContactForm_contentDiv, form {
-    font-family: 'Segoe UI', Helvetica, Arial, sans-serif !important;
-    max-width: 100%;
-    margin: 0 auto;
-    background-color: transparent !important; /* Kein grauer Hintergrund */
+/* style.css - Speichere diesen Code in einer Datei */
+
+/* Erzwingt transparenten Hintergrund und Schriftart */
+body, form, .steamContactForm_contentDiv {
+    background-color: transparent !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    color: #333 !important;
 }
 
-/* --- LABELS (Beschriftungen) --- */
+/* Labels (Beschriftung über den Feldern) */
 label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #333; /* Dunkelgraue Schrift */
-    font-size: 14px;
+    display: block !important;
+    font-weight: bold !important;
+    margin-bottom: 8px !important;
+    color: #000 !important;
 }
 
-/* --- EINGABEFELDER (Input & Textarea) --- */
-input[type="text"], 
-input[type="email"], 
-input[type="tel"], 
-textarea,
-select {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd !important; /* Dünner grauer Rahmen */
+/* Eingabefelder modernisieren */
+input, textarea, select {
+    width: 100% !important;
+    padding: 12px !important;
+    margin-bottom: 15px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
     background-color: #fff !important;
-    border-radius: 6px !important; /* Leicht abgerundete Ecken */
-    font-size: 16px;
-    box-sizing: border-box; /* Verhindert, dass Padding die Breite sprengt */
-    transition: all 0.3s ease;
+    box-sizing: border-box !important;
+    font-size: 16px !important;
 }
 
-/* Effekt beim Reinklicken */
-input:focus, textarea:focus, select:focus {
-    border-color: #007bff !important; /* Hier deine Farbe einsetzen */
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1); /* Leichter Schein */
+/* Fokus-Effekt (wenn man reinklickt) */
+input:focus, textarea:focus {
+    border-color: #007bff !important;
+    outline: none !important;
 }
 
-/* Textarea Höhe festlegen */
-textarea {
-    min-height: 120px;
-    resize: vertical; /* Erlaubt vertikales Ziehen */
-}
-
-/* --- SENDEN BUTTON --- */
+/* Der Senden-Button */
 button, input[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: #000 !important; /* Button-Farbe: Schwarz */
+    width: 100% !important;
+    background-color: #000 !important; /* Button Farbe */
     color: #fff !important;
+    padding: 14px !important;
     border: none !important;
-    border-radius: 6px !important;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
-    margin-top: 10px;
+    border-radius: 4px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    margin-top: 10px !important;
 }
 
-/* Button Hover Effekt (Maus drüber) */
 button:hover, input[type="submit"]:hover {
-    background-color: #333 !important; /* Etwas heller beim Drüberfahren */
-    transform: translateY(-2px); /* Button hebt sich leicht */
-}
-
-/* --- FEHLERMELDUNGEN (falls vorhanden) --- */
-.error, .validation-error {
-    color: #dc3545 !important;
-    font-size: 13px;
-    margin-top: -15px;
-    margin-bottom: 15px;
+    background-color: #333 !important;
+    transform: translateY(-1px);
 }
